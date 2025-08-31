@@ -18,4 +18,5 @@ export const env = {
   SMTP_PASS: required('SMTP_PASS', process.env.SMTP_PASS),
   MAIL_FROM: required('MAIL_FROM', process.env.MAIL_FROM),
   GOOGLE_CLIENT_ID: required('GOOGLE_CLIENT_ID', process.env.GOOGLE_CLIENT_ID),
+  APP_NAME: required("APP_NAME", process.env.APP_NAME),
 };

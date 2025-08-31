@@ -37,7 +37,7 @@ export async function verifyOtp(req: Request, res: Response) {
   const parsed = verifyOtpSchema.safeParse(req.body);
   if (!parsed.success) return res.status(400).json({ success: false, error: 'Invalid input', details: parsed.error.flatten() });
 
-  const { name, email, dob, otp } = parsed.data;
+  const { name, email, otp } = parsed.data;
   const record = await Otp.findOne({ email }).sort({ expiresAt: -1 });
   if (!record) return res.status(400).json({ success: false, error: 'OTP not found. Please request a new code.' });
   if (record.expiresAt < new Date()) return res.status(400).json({ success: false, error: 'OTP expired. Please request a new code.' });
@@ -46,7 +46,7 @@ export async function verifyOtp(req: Request, res: Response) {
   // upsert user
   const user = await User.findOneAndUpdate(
     { email },
-    { $setOnInsert: { provider: 'email' }, $set: { emailVerified: true, name: name ?? undefined,dob: dob ?? undefined } },
+    { $setOnInsert: { provider: 'email' }, $set: { emailVerified: true, name: name ?? undefined } },
     { upsert: true, new: true }
   );
 
