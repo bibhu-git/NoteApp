@@ -37,18 +37,25 @@ The app allows users to sign up with **Email + OTP** or **Google Login**, verify
 
 ### 1. Clone the repository
 git clone https://github.com/bibhu-git/NoteApp.git
+
 cd note-app
 
 ## 2. Backend Setup
 cd backend
+
 cp .env.example .env   # Add Mongo URI, JWT secret, Google Client ID, SMTP creds
+
 npm install
+
 npm run dev
 
 ## 3. Frontend Setup
 cd frontend
+
 cp .env.example .env   # Add API base URL + Google Client ID
+
 npm install
+
 npm run dev
 
 ##  Usage
