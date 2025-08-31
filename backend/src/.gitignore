@@ -1,0 +1,25 @@
+# -------- common --------
+node_modules/
+dist/
+build/
+coverage/
+*.log
+.DS_Store
+Thumbs.db
+
+# -------- envs --------
+.env
+.env.*.local
+backend/.env
+frontend/.env
+
+# -------- editors --------
+.vscode/
+.idea/
+
+# -------- vite/react --------
+frontend/.vite/
+frontend/dist/
+
+# -------- ts/next misc --------
+*.tsbuildinfo
