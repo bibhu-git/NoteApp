@@ -64,4 +64,4 @@ npm run dev
 3.	Verify OTP or Google login
 4.	Create and delete notes from the dashboard
 ## License
-MIT © 2025 Bibhu Ranjan Mohanty
+MIT © 2025 **Bibhu Ranjan Mohanty**
