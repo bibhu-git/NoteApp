@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState, useContext, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import api from "../api/api";
@@ -21,7 +22,6 @@ export default function Login() {
   // Initialize Google Login
   useEffect(() => {
     if (window.google) {
-      console.log("google client id", import.meta.env.VITE_GOOGLE_CLIENT_ID);
       window.google.accounts.id.initialize({
         client_id: import.meta.env.VITE_GOOGLE_CLIENT_ID,
         callback: handleGoogleResponse,
