@@ -78,11 +78,15 @@ note-app/
 
 1. **Clone the repo**
    git clone https://github.com/bibhu-git/NoteApp.git
+   
    cd note-app
+   
 Backend Setup
 
 cd backend
+
 cp .env.example .env   # update values (Mongo URI, JWT secret, Google client ID, SMTP credentials)
+
 npm install
 npm run dev
 Frontend Setup
